@@ -1,2 +1,2 @@
 # card-scan
-Card scanning application using OpenCV
+An application of a card scanner using OpenCV
