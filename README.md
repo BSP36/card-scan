@@ -1,6 +1,5 @@
-### README for Card Detection and Perspective Transformation
 
----
+### README for Card Detection and Perspective Transformation
 
 ## Overview
 
@@ -92,3 +91,4 @@ This project is licensed under the MIT License. See the `LICENSE` file for detai
 ---
 
 Feel free to modify and extend this document as needed to better suit your project and audience.
+=======
