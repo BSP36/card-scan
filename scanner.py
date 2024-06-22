@@ -130,13 +130,13 @@ class CardScanner:
         return rect
 
 if __name__ == "__main__":
-    img = cv2.imread("./images/card1.jpg")
-    # img = cv2.imread("./images/card2.webp")
+    img = cv2.imread("./images/imagejpg")
+    img_copy = img.copy()
     sc = CardScanner()
     img_detected, contours = sc.detect_card_contours(img)
     plt.imshow(cv2.cvtColor(img, cv2.COLOR_BGR2RGB))
     plt.show()
-    imgs = sc.transform_to_front_view(img, contours)
+    imgs = sc.transform_to_front_view(img_copy, contours)
     for im in imgs:
         plt.imshow(cv2.cvtColor(im, cv2.COLOR_BGR2RGB))
         plt.show()
