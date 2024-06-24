@@ -18,26 +18,9 @@ To install the necessary libraries, you can use:
 pip install opencv-python numpy matplotlib
 ```
 
-## Usage
-
-1. **Clone the Repository**: First, clone this repository to your local machine using:
-    ```bash
-    git clone <repository_url>
-    cd <repository_folder>
-    ```
-
-2. **Prepare the Input Image**: Place the image you want to process in the project directory or specify its path.
-
-3. **Run the Script**: You can run the script using a Python environment:
-    ```bash
-    python scanner.py
-    ```
-
-4. **View Results**: The program will display the processed image with detected card contours and the transformed front view images. The output images will also be stored in the specified output directory.
-
 ## Code Structure
 
-- **`card_detector.py`**: The main script containing the class `CardDetector` which includes methods to detect card contours and apply perspective transformation.
+- **`scanner.py`**: The main script containing the class `CardScanner` which includes methods to detect card contours and apply perspective transformation.
 
 ### Key Functions
 
@@ -58,20 +41,20 @@ pip install opencv-python numpy matplotlib
 
 ### Example
 
-Here is a basic example of how to use the `CardDetector` class in your script:
+Here is a basic example of how to use the `CardScanner` class in your script:
 
 ```python
-from card_detector import CardDetector
+from card_detector import CardScanner
 import cv2
 
 # Load the image
 image = cv2.imread('path_to_your_image.jpg')
 
-# Create a CardDetector object
-detector = CardDetector()
+# Create a CardScanner object
+scanner = CardScanner()
 
 # Detect card contours
-processed_image, contours = detector.detect_card_contours(image)
+processed_image, contours = scanner.detect_card_contours(image)
 
 # Transform to front view
 front_views = detector.transform_to_front_view(image, contours)
