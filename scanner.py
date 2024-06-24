@@ -130,8 +130,7 @@ class CardScanner:
         return rect
 
 if __name__ == "__main__":
-    img = cv2.imread("./images/card1.jpg")
-    # img = cv2.imread("./images/card2.webp")
+    img = cv2.imread("./image.jpg")
     sc = CardScanner()
     img_detected, contours = sc.detect_card_contours(img)
     plt.imshow(cv2.cvtColor(img, cv2.COLOR_BGR2RGB))
