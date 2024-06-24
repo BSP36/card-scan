@@ -72,6 +72,3 @@ cv2.destroyAllWindows()
 This project is licensed under the MIT License. See the `LICENSE` file for details.
 
 ---
-
-Feel free to modify and extend this document as needed to better suit your project and audience.
-=======
